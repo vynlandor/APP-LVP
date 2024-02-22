@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+
+    <style>
+      /* Estilos para el formulario */
+      .formulario {
+      border: 2px solid black; /* Borde */
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente negro */
+      padding: 20px;
+      width: 80%; /* Ancho del formulario */
+      margin: 0 auto; /* Centrar el formulario horizontalmente */
+      text-align: center; /* Centrar elementos */
+      transform: translateY(30%); /* Ajustar la posición vertical */
+    }
+      /* Estilos para el título */
+      .formulario h2 {
+        color: white; /* Color blanco */
+      }
+      /* Estilos para los inputs y el botón */
+      .formulario input[type="text"],
+      .formulario input[type="number"],
+      .formulario select,
+      .formulario button {
+        margin-bottom: 10px;
+        width: calc(
+          100% - 18px
+        ); /* Ancho del 100% menos el espacio de padding y border */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box; /* Considerar el padding y border en el tamaño */
+        height: 40px; /* Altura del campo de entrada */
+        width: 90%;
+      }
+      /* Estilos para el botón */
+      .formulario button {
+        background-color: #4caf50; /* Color de fondo */
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      /* Estilos para el texto */
+      .formulario label {
+        color: white;
+        display: block; /* Convertir en bloque */
+        text-align: center; /* Centrar el texto */
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <!-- Botón de menú desplegable con tres rayas -->
+      <button class="menu-desplegable" onclick="toggleMenu()">&#8801;</button>
+      <h1 class="menu-title">LA VERA PIZZA</h1>
+      <h1 class="menu-title-1">ALBA MADRE</h1>
+    </header>
+
+    <div class="formulario">
+      <h2>Realizar Pedido</h2>
+      <form action="https://wa.me/+543464445975" method="get">
+        <label for="producto">Producto:</label>
+        <select id="producto" name="producto">
+          <option value="producto1">PREPIZZAS</option>
+          <option value="producto2">HOGAZAS</option>
+          <option value="producto3">BAGUETTES</option>
+          <option value="producto4">FOCACCIAS</option>
+          <option value="producto5">PAN INTEGRAL</option>
+        </select>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" value="1" />
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" />
+        <button type="submit">Enviar Pedido</button>
+      </form>
+    </div>
+
+    <section class="container" id="menuContainer">
+      <div class="menu-1">
+        <!-- Botones adicionales -->
+        <a href="hacerpedidos.html" class="menu-button-1">HACER PEDIDO</a>
+        <a href="productos.html" class="menu-button-2">NUESTROS PRODUCTOS</a>
+      </div>
+
+      <div id="menu-2">
+        <!-- Botones del menú -->
+        <a href="index.html" class="menu-button">Inicio</a>
+        <a href="pizzanapolitana.html" class="menu-button">Pizza Napolitana</a>
+        <a href="Quienessomos.html" class="menu-button">¿Quienes somos?</a>
+        <a href="productos.html" class="menu-button">Productos</a>
+        <a href="contacto.html" class="menu-button">Contacto</a>
+      </div>
+    </section>
+
+    <video autoplay loop muted class="background-video">
+      <source src="video/video-portada.webm" type="video/webm" />
+      Tu navegador no soporta el elemento de video.
+    </video>
+
+    <script>
+      function toggleMenu() {
+        var container = document.getElementById("menuContainer");
+        var header = document.getElementById("header");
+        container.classList.toggle("visible");
+        header.classList.toggle("transparent");
+      }
+    </script>
+
+    <main>
+      <div class="boton-whatsapp">
+        <a href="https://wa.me/1234567890" target="_blank">
+          <img src="img/wp2-icon.png" alt="WhatsApp" />
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
